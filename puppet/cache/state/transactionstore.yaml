@@ -1,0 +1,14 @@
+---
+resources:
+  File[/opt/directory]:
+    parameters:
+      ensure:
+        system_value: :directory
+  File[/opt/directory/file]:
+    parameters:
+      ensure:
+        system_value: :present
+      owner:
+        system_value: 1000
+      group:
+        system_value: 1000
